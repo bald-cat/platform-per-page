@@ -1,0 +1,28 @@
+{
+  "name": "baldcat/platform-per-page",
+  "description": "Adds functionality for selecting the number of records in tables for the Orchid Platform.",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Baldcat\\PlatformPerPage\\": "src"
+    }
+  },
+  "version": "0.1.0",
+  "require": {
+    "php": "^8.0",
+    "orchid/platform": "^14.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^9.5"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Baldcat\\PlatformPerPage\\PlatformPerPageServiceProvider"
+      ]
+    }
+  },
+  "prefer-stable": true,
+  "minimum-stability": "stable"
+}

@@ -1,0 +1,39 @@
+# Laravel specific
+/vendor/
+/node_modules/
+/public/hot
+/public/storage
+/storage/*.key
+/.env
+/.env.*.local
+/.idea/
+/*.log
+
+# Composer
+composer.lock
+
+# IDE specific
+*.sublime-project
+*.sublime-workspace
+.vscode/
+.idea/
+
+# NPM
+package-lock.json
+yarn-error.log
+
+# Coverage
+coverage/
+*.coverage
+*.cov
+
+# Ignore compiled files
+*.phar
+
+# Ignore the generated files
+*.generated.php
+*.stub.php
+
+# Ignore build files
+build/
+dist/
