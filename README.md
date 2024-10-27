@@ -37,24 +37,7 @@ class ExampleTable extends Table
 
 ```
 
-Add PaginateControl trait to model:
-
-```php
-<?php
-
-namespace App\Models;
-
-use Baldcat\PlatformPerPage\Traits\PaginateControl;
-use Illuminate\Database\Eloquent\Model;
-use Orchid\Screen\AsSource;
-
-class Test extends Model
-{
-    use AsSource, PaginateControl;
-}
-
-```
-Now, you can call it in the query method like this:
+You can use the ppp macros for the query builder to specify the number of records in the query method:
 
 ```php
     public function query(): iterable
