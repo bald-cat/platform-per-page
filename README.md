@@ -10,8 +10,8 @@ composer require baldcat/platform-per-page
 
 ## Usage
 
-Connecting the Functionality to the Table
-To integrate the pagination functionality into your table, override the $template property as shown below:
+### Connecting the Functionality to the Table
+To add the ability to select a number of records to a table, override the $template property as shown below:
 
 ```php
 <?php
@@ -37,7 +37,7 @@ class ExampleTable extends Table
 
 ```
 
-To use pagination in your model, add the PaginateControl trait:
+Add PaginateControl trait to model:
 
 ```php
 <?php

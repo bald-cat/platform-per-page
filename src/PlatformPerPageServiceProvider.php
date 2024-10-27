@@ -5,6 +5,8 @@ namespace Baldcat\PlatformPerPage;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Contracts\Http\Kernel;
 use Baldcat\PlatformPerPage\Http\Middleware\PlatformPerPageMiddleware;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class PlatformPerPageServiceProvider extends ServiceProvider
 {
@@ -25,6 +27,12 @@ class PlatformPerPageServiceProvider extends ServiceProvider
 
         $kernel->pushMiddleware(PlatformPerPageMiddleware::class);
         $kernel->appendMiddlewareToGroup('web', PlatformPerPageMiddleware::class);
+
+        Builder::macro('ppp', function ($perPage = null): LengthAwarePaginator {
+            $perPage = $perPage ?? request('pp_page', config('platform-pp.options')[0]);
+            return $this->paginate($perPage);
+        });
+
     }
 
 }
