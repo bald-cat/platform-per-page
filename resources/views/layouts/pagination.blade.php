@@ -56,7 +56,7 @@
                 @foreach(config('platform-pp.options') as $perPageOption)
                     <li>
                         <a class="dropdown-item {{ request('pp_page') == $perPageOption ? 'active' : '' }}"
-                           href="{{ request()->fullUrlWithQuery(['pp_page' => $perPageOption]) }}">
+                           href="{{ request()->fullUrlWithQuery(['pp_page' => $perPageOption, 'page' => null]) }}">
                             {{ $perPageOption }} {{ __('per page') }}
                         </a>
                     </li>
